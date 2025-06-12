@@ -40,32 +40,32 @@ El valor que ofrecerá la base de datos a "Ya Crédito" será:
 - mejor seguimiento del rendimiento de los empleados, 
 - información para la toma de decisiones.
 
-En la tabla auditoría de cobros por día tendremos los cobros que se hicieron cada día.
-En la tabla auditoría de creditos otorgados tendremos los datos de los créditos para analizar durante qué período fueron dados.
-En la tabla campaña_cobranzas tendremos los datos de campañas de cobranza especiales que se hayan realizado.
-En la Tabla Clientes tendremos los datos de los clientes, tales como: nombre, apellido, DNI, edad, mail, telefono.
-En la Tabla Créditos tendremos los datos de los créditos brindados a cada uno de los clientes, con sus respectivas condiciones, vinculadas
+- En la tabla auditoría de cobros por día tendremos los cobros que se hicieron cada día.
+- En la tabla auditoría de creditos otorgados tendremos los datos de los créditos para analizar durante qué período fueron dados.
+- En la tabla campaña_cobranzas tendremos los datos de campañas de cobranza especiales que se hayan realizado.
+- En la Tabla Clientes tendremos los datos de los clientes, tales como: nombre, apellido, DNI, edad, mail, telefono.
+- En la Tabla Créditos tendremos los datos de los créditos brindados a cada uno de los clientes, con sus respectivas condiciones, vinculadas
 entre sí con el id de los clientes como clave foránea.
-En la Tabla Cuota_credito estará el detalle de cada una de las cuotas de los distintos créditos. Tendrá el id del crédito como clave foránea.
-En la Tabla Empleados estarán los datos de los empleados encargados de la gestión de la cobranza de la cartera morosa de
+- En la Tabla Cuota_credito estará el detalle de cada una de las cuotas de los distintos créditos. Tendrá el id del crédito como clave foránea.
+- En la Tabla Empleados estarán los datos de los empleados encargados de la gestión de la cobranza de la cartera morosa de
 Ya Créditos.
-En la tabla estado_credito tendremos los distintos posibles estados que puede tener el crédito. Tendrá el id del crédito, de la cuota y del cliente
+- En la tabla estado_credito tendremos los distintos posibles estados que puede tener el crédito. Tendrá el id del crédito, de la cuota y del cliente
 como claves foráneas.
-En la Tabla Cobros se encontrarán los cobros de cada unos de los créditos brindados a los clientes, los cuales pudieron haberse dado de manera orgánica (que el cliente pague
+- En la Tabla Cobros se encontrarán los cobros de cada unos de los créditos brindados a los clientes, los cuales pudieron haberse dado de manera orgánica (que el cliente pague
 proactivamente) o que haya sido gracias a la gestión de cobranzas de un empleado.  En caso de haber sido gracias a un empleado, esto lo veremos referenciado con una clave 
 foránea, la cual será el id del empleado. También tendrá como claves foráneas el id del crédito y de la cuota.
-En la Tabla Gestiones_empleados tendremos las gestiones de cobranzas de los empleados para atraer los pagos de los clietnes. En caso de ser una gestión exitosa, esta tendrá como resultado una
+- En la Tabla Gestiones_empleados tendremos las gestiones de cobranzas de los empleados para atraer los pagos de los clietnes. En caso de ser una gestión exitosa, esta tendrá como resultado una
 promesa de pago cumplida.
-En tabla log_empleados estará los ingresos de cada uno de los empleados al sistema de gestión de cobranzas. Tendrá como clave foránea el id
+- En tabla log_empleados estará los ingresos de cada uno de los empleados al sistema de gestión de cobranzas. Tendrá como clave foránea el id
 del empleado.
-En la tabla metricas_empleados se encontrarán los datos sobre la performance de la gestión de los empleados en un determinado periodo,
+- En la tabla metricas_empleados se encontrarán los datos sobre la performance de la gestión de los empleados en un determinado periodo,
 tales como: cantidad de gestiones, promesas de pago, promesas de pago cumplidas y el monto de deuda recuperado. Tiene como clave primaria y foránea
 el id del empleado.
-En la Tabla Promesas_pago estará el estado de cada una de las promesas de pago hechas por los empleados y si esta representó un cobro efectivo.
+- En la Tabla Promesas_pago estará el estado de cada una de las promesas de pago hechas por los empleados y si esta representó un cobro efectivo.
 Tiene como claves foráneas el id del cliente, del empleado y de la gestión.
-En la tabla score_clientes estarán la cantidad de créditos que hayan tenido en total los clietnes, el total de la deuda que tienn y el estado
+- En la tabla score_clientes estarán la cantidad de créditos que hayan tenido en total los clietnes, el total de la deuda que tienn y el estado
 de los créditos actuales. Tiene como clave primaria y foránea el id del cliente. 
-En la tabla tipo de gestión estarán los tipos de gestiones que pueden llevar adelante los empleados.
+- En la tabla tipo de gestión estarán los tipos de gestiones que pueden llevar adelante los empleados.
 
 
 
@@ -113,3 +113,6 @@ Herramientas utilizadas:
 - Excel
 - Github
 
+## Autor: Alejo Duarte
+## Profesor: Alejandro Di Stéfano
+## Coderhouse - Curso SQL - Comisión 75965
