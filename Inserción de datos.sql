@@ -167,4 +167,25 @@ INSERT INTO score_clientes (id_cliente, cantidad_creditos, deuda_historica_total
 (9, 2, 40000, 'Finalizado'),
 (10, 4, 90000, 'Vencido');
 
+-- Uso de vistas
+
+SELECT * FROM clientes_sin_gestionar;
+SELECT * FROM deudas_vencidas;
+SELECT * FROM Ranking_empleados;
+SELECT * FROM resultado_campaña;
+SELECT * FROM top_empleado;
+
+-- Uso de funciones 
+SELECT id_empleado, periodo,
+  calcular_performance(cantidad_gestiones, promesas_cumplidas, monto_cobrado) AS puntaje
+FROM metricas_empleados;	
+
+SELECT c.id_credito, c.monto, total_pagado_credito(c.id_credito) AS pagado
+FROM creditos c;
+
+-- Uso de Stored Procedures
+CALL renovacion_credito(1);
+
+CALL actualizar_saldo_pendiente(1);
+
 
